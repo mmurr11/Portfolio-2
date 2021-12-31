@@ -4,6 +4,61 @@ import { SharedCard } from './SharedCard'
 const Work = (props) => {
     return (
         <Container>
+            
+            <ProjectCard>
+                <PhotoContainer>
+                    <CardBackground />
+                    <a>
+                        <Photo />
+                    </a>                    
+                </PhotoContainer>
+                <Links>                    
+                        <div>
+                            <a href='#'>
+                                <button>Code</button>
+                            </a>
+                            <a href='#'>
+                                <button>Demo</button>
+                            </a>
+                        </div>                    
+                </Links>
+            </ProjectCard>
+            <ProjectCard>
+                <PhotoContainer>
+                    <CardBackground />
+                    <a>
+                        <Photo />
+                    </a>                    
+                </PhotoContainer>
+                <Links>                    
+                        <div>
+                            <a href='#'>
+                                <button>Code</button>
+                            </a>
+                            <a href='#'>
+                                <button>Demo</button>
+                            </a>
+                        </div>                    
+                </Links>
+            </ProjectCard>
+            <ProjectCard>
+                <PhotoContainer>
+                    <CardBackground />
+                    <a>
+                        <Photo />
+                    </a>                    
+                </PhotoContainer>
+                <Links>                    
+                        <div>
+                            <a href='#'>
+                                <button>Code</button>
+                            </a>
+                            <a href='#'>
+                                <button>Demo</button>
+                            </a>
+                        </div>                    
+                </Links>
+            </ProjectCard>
             <ProjectCard>
                 <PhotoContainer>
                     <CardBackground />
@@ -27,26 +82,30 @@ const Work = (props) => {
 };
 
 const Container = styled.div`
-    display: grid;
-    grid-area: auto;
     align-items: center;
-    width: 300px;
-    border-radius: 50%;
-    @media (min-width: 768px) {
-        max-width: 428px;    
+    display: flex;  
+    flex-direction: row; 
+    justify-content: space-between;   
+    @media (max-width: 768px) {
+        flex-direction: column;
     }
 `;
 
 const ProjectCard = styled.div`
+  margin: 20px;
   text-align: center;
   overflow: hidden;
   margin-bottom: 8px;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 7.5%;
   transition: box-shadow 83ms;
   position: relative;
   border: none;
   box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
+  width: 350px;
+  @media (min-width: 768px) {
+    width: 250px;   
+    }
 `;
 
 const PhotoContainer = styled.div`
@@ -54,7 +113,7 @@ const PhotoContainer = styled.div`
   padding: 12px 12px 16px;
   word-wrap: break-word;
   word-break: break-word;
-  height: 200px;
+  height: 300px;
 `;
 
 const CardBackground = styled.div`
@@ -66,8 +125,8 @@ const CardBackground = styled.div`
 
 const Photo = styled.div`
   box-shadow: none;
-  width: 72px;
-  height: 72px;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
   background-clip: content-box;
   background-color: white;
