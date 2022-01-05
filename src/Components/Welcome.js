@@ -21,15 +21,17 @@ const Welcome  = (props) => {
 }
 
 const Intro = styled(SharedCard)`
-    
+    border: 1px solid #373737;
+
+    > * {
+        background-color: #202020;
+    }
 `;
 
 const Title = styled.div`
-    
 `;
 
 const Subtitle = styled.div`
-    
 `;
 
 export default Welcome

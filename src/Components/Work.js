@@ -9,10 +9,8 @@ const Work = (props) => {
                 <PhotoContainer>
                     <CardBackground />
                     <a>
-                        <Photo />
-                    </a>                    
-                </PhotoContainer>
-                <Links>                    
+                        <Photo>
+                        <Links>                    
                         <div>
                             <a href='#'>
                                 <button>Code</button>
@@ -22,60 +20,9 @@ const Work = (props) => {
                             </a>
                         </div>                    
                 </Links>
-            </ProjectCard>
-            <ProjectCard>
-                <PhotoContainer>
-                    <CardBackground />
-                    <a>
-                        <Photo />
+                        </Photo>
                     </a>                    
                 </PhotoContainer>
-                <Links>                    
-                        <div>
-                            <a href='#'>
-                                <button>Code</button>
-                            </a>
-                            <a href='#'>
-                                <button>Demo</button>
-                            </a>
-                        </div>                    
-                </Links>
-            </ProjectCard>
-            <ProjectCard>
-                <PhotoContainer>
-                    <CardBackground />
-                    <a>
-                        <Photo />
-                    </a>                    
-                </PhotoContainer>
-                <Links>                    
-                        <div>
-                            <a href='#'>
-                                <button>Code</button>
-                            </a>
-                            <a href='#'>
-                                <button>Demo</button>
-                            </a>
-                        </div>                    
-                </Links>
-            </ProjectCard>
-            <ProjectCard>
-                <PhotoContainer>
-                    <CardBackground />
-                    <a>
-                        <Photo />
-                    </a>                    
-                </PhotoContainer>
-                <Links>                    
-                        <div>
-                            <a href='#'>
-                                <button>Code</button>
-                            </a>
-                            <a href='#'>
-                                <button>Demo</button>
-                            </a>
-                        </div>                    
-                </Links>
             </ProjectCard>
         </Container>
     );
@@ -96,7 +43,7 @@ const ProjectCard = styled.div`
   text-align: center;
   overflow: hidden;
   margin-bottom: 8px;
-  background-color: #fff;
+  background-color: #202020;
   border-radius: 7.5%;
   transition: box-shadow 83ms;
   position: relative;
@@ -135,7 +82,7 @@ const Photo = styled.div`
   background-repeat: no-repeat;
   border: 2px solid white;
   margin: -38px auto 12px;
-  border-radius: 50%;
+  border-radius: 7.5%;
 `;
 
 const Links = styled.div`
@@ -147,9 +94,15 @@ const Links = styled.div`
           justify-content: space-between;
           padding: 16px;
         button {
+            color: #c7c7c7;
             font-size: 12px;
-            font-weight: 700;
+            font-weight: 900;
             line-height: 1.3;
+            border: none;
+            background: transparent;
+            &:hover {
+                color: rgb(0, 0, 255);
+            }
         }
     }
 }
