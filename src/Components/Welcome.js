@@ -6,14 +6,16 @@ const Welcome  = (props) => {
         <Intro>
             <Title>
                 <h1>
-                    Hey, I'm Matthew.
+                    Hey, <br/> I'm Matthew.
                 </h1>
             </Title>
             <Subtitle>
                 <h2>
                     I'm a front-end developer based in Birmingham, Al.
                     <br/>
-                    If you're looking to hire me, then fill out the contact form below.
+                    Thanks for checking out my work.<br/>
+                    If you're looking to hire me, <br/>
+                    then fill out the contact form below.
                 </h2>
             </Subtitle>
         </Intro>
@@ -21,17 +23,39 @@ const Welcome  = (props) => {
 }
 
 const Intro = styled(SharedCard)`
-    border: 1px solid #373737;
-
-    > * {
-        background-color: #202020;
+    width: 400px;
+    outline: none;
+    padding: 10px 0;
+    margin: 10%;
+    @media (min-width: 768px) {
+        width: 1300px;
+        margin-bottom: 20%;
     }
 `;
 
 const Title = styled.div`
+    margin: 10% 20px 30% auto;
+    font-size: 60px;
+    text-align: left;
+    padding: 4px;
+    @media (min-width: 768px) {
+        margin-top: 30px;
+        font-size: 100px;        
+        margin-right: 20px;
+        margin-bottom: 20%;
+    }
 `;
 
 const Subtitle = styled.div`
+    margin-left: 20%;
+    margin-bottom: 20px;
+    font-size: 25px;
+    text-align: left;
+    padding-bottom: 2.5%;
+    @media (min-width: 768px) {
+        margin-top: 30px;
+        margin-left: 50%;
+    }
 `;
 
 export default Welcome

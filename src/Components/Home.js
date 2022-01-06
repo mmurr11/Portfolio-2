@@ -19,11 +19,15 @@ const Layout = styled.div`
   display: flex;
   flex-direction: column;
   column-gap: 25px;
-  margin: 25px 10%;
+  margin: 0 0 0 10%;;
   align-items: center;
   overflow: none;
+  background-color: #202020;
   @media (max-width: 768px) {
     padding: 0 5px;
+  }
+  > * {
+    border-bottom: 1px solid #303030;
   }
 `;
 

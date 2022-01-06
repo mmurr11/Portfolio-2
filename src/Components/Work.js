@@ -94,14 +94,13 @@ const Links = styled.div`
           justify-content: space-between;
           padding: 16px;
         button {
-            color: #c7c7c7;
             font-size: 12px;
             font-weight: 900;
             line-height: 1.3;
             border: none;
             background: transparent;
             &:hover {
-                color: rgb(0, 0, 255);
+                color: #2557a7;
             }
         }
     }
