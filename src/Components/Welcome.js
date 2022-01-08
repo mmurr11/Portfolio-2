@@ -48,13 +48,15 @@ const Title = styled.div`
 
 const Subtitle = styled.div`
     margin-left: 20%;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
     font-size: 25px;
     text-align: left;
-    padding-bottom: 2.5%;
+    padding-top: 25%;
+    padding-bottom: 10%;
     @media (min-width: 768px) {
         margin-top: 30px;
         margin-left: 50%;
+        padding-top: none;
     }
 `;
 
