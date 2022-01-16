@@ -6,7 +6,7 @@ const Welcome  = (props) => {
         <Intro>
             <Title>
                 <h1>
-                    Hey, <br/> I'\m.
+                    Hey, <br/> I'm Matthew.
                 </h1>
             </Title>
             <Subtitle>
@@ -23,24 +23,22 @@ const Welcome  = (props) => {
 }
 
 const Intro = styled(SharedCard)`
-    width: 400px;
     outline: none;
-    padding: 10px 0;
+    padding: 0.5rem;
     margin: 10%;
     @media (min-width: 768px) {
-        width: 1300px;
+        width: 90%;
         margin-bottom: 20%;
     }
 `;
 
 const Title = styled.div`
-    margin: 10% 20px 30% auto;
-    font-size: 60px;
+    margin-top: 10%;
+    font-size: 4rem;
     text-align: left;
     padding: 4px;
     @media (min-width: 768px) {
-        margin-top: 30px;
-        font-size: 100px;        
+        margin-top: 10%;
         margin-right: 20px;
         margin-bottom: 20%;
     }
@@ -49,14 +47,14 @@ const Title = styled.div`
 const Subtitle = styled.div`
     margin-left: 20%;
     margin-bottom: 10%;
-    font-size: 25px;
+    font-size: 2rem;
     text-align: left;
     padding-top: 25%;
     padding-bottom: 10%;
     @media (min-width: 768px) {
         margin-top: 30px;
         margin-left: 50%;
-        padding-top: none;
+        padding: 0px;
     }
 `;
 
