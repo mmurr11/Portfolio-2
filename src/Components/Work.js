@@ -3,78 +3,72 @@ import { SharedCard } from './SharedCard'
 
 const Work = (props) => {
     return (
-        <Container>
+        <Container id="container">
             
-            <ProjectCard>
-                <PhotoContainer>
-                        <Photo>
-                            <Links>                    
-                                <div>
-                                    <a href='#'>
-                                        <button>Code</button>
-                                    </a>
-                                    <a href='#'>
-                                        <button>Demo</button>
-                                    </a>
-                                </div>                    
-                            </Links>
-                        </Photo>                                        
+            <ProjectCard className="projectCard">
+                <PhotoContainer className="photoContainer" >
+                        <Links className="links">                    
+                                
+                            <a href='#'>
+                                <button>Code</button>
+                            </a>
+                            <a href='#'>
+                                <button>Demo</button>
+                            </a>
+                                                   
+                         </Links>                                       
                 </PhotoContainer>
             </ProjectCard>
-            <ProjectCard>
-                <PhotoContainer>
-                        <Photo>
-                            <Links>                    
-                                <div>
-                                    <a href='#'>
-                                        <button>Code</button>
-                                    </a>
-                                    <a href='#'>
-                                        <button>Demo</button>
-                                    </a>
-                                </div>                    
-                            </Links>
-                        </Photo>                                        
+            <ProjectCard className="projectCard">
+                <PhotoContainer className="photoContainer" >
+                        <Links className="links">                    
+                                
+                            <a href='#'>
+                                <button>Code</button>
+                            </a>
+                            <a href='#'>
+                                <button>Demo</button>
+                            </a>
+                                                   
+                         </Links>                                       
                 </PhotoContainer>
             </ProjectCard>
-            <ProjectCard>
-                <PhotoContainer>
-                        <Photo>
-                            <Links>                    
-                                <div>
-                                    <a href='#'>
-                                        <button>Code</button>
-                                    </a>
-                                    <a href='#'>
-                                        <button>Demo</button>
-                                    </a>
-                                </div>                    
-                            </Links>
-                        </Photo>                                        
+            <ProjectCard className="projectCard">
+                <PhotoContainer className="photoContainer" >
+                        <Links className="links">                    
+                                
+                            <a href='#'>
+                                <button>Code</button>
+                            </a>
+                            <a href='#'>
+                                <button>Demo</button>
+                            </a>
+                                                   
+                         </Links>                                       
                 </PhotoContainer>
             </ProjectCard>
-            <ProjectCard>
-                <PhotoContainer>
-                        <Photo>
-                            <Links>                    
-                                <div>
-                                    <a href='#'>
-                                        <button>Code</button>
-                                    </a>
-                                    <a href='#'>
-                                        <button>Demo</button>
-                                    </a>
-                                </div>                    
-                            </Links>
-                        </Photo>                                        
+            <ProjectCard className="projectCard">
+                <PhotoContainer className="photoContainer" >
+                        <Links className="links">                    
+                                
+                            <a href='#'>
+                                <button>Code</button>
+                            </a>
+                            <a href='#'>
+                                <button>Demo</button>
+                            </a>
+                                                   
+                         </Links>                                       
                 </PhotoContainer>
             </ProjectCard>
+            
 
         </Container>
     );
 };
 
 const Container = styled.div`
+    position: relative;
     align-items: center;
     display: flex;  
     flex-direction: row; 
@@ -100,45 +94,34 @@ const ProjectCard = styled.div`
 
 const PhotoContainer = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  padding: 12px 12px 16px;
   word-wrap: break-word;
   word-break: break-word;
-  height: 300px;
-`;
-
-const Photo = styled.div`
-  box-shadow: none;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  background-clip: content-box;
-  background-color: white;
-  background-position: center;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  border: 2px solid white;
-  margin: -38px auto 12px;
-  border-radius: 7.5%;
+  height: 32.5em;
 `;
 
 const Links = styled.div`
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  div {
-      text-align: center;
-      a {
-          justify-content: space-between;
-          padding: 16px;
-        button {
-            font-size: 12px;
-            font-weight: 900;
-            line-height: 1.3;
-            border: none;
-            background: transparent;
-            &:hover {
-                color: #2557a7;
+    position: absolute;
+    bottom: 0; 
+    display: flex;  
+    flex-direction: row; 
+    margin: 0 24%;
+    background: none;
+        a {
+            justify-content: space-between;
+            background: none;
+            button {
+                background: none; 
+                width: 6rem;
+                font-size: 1.4rem;
+                font-weight: 800;
+                line-height: 1;
+                border: none;
+                margin: 10%;
+                &:hover {
+                    color: #2557a7;
+                }
             }
-        }
-    }
+        
 }
 `;
 
