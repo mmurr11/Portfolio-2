@@ -18,14 +18,11 @@ const Home = (props) => {
 const Layout = styled.div`
   display: flex;
   flex-direction: column;
-  column-gap: 25px;
-  margin: 0 0 0 10%;;
+  column-gap: 10%;
+  margin-left: 5%;
   align-items: center;
   overflow: none;
   background-color: #202020;
-  @media (max-width: 768px) {
-    padding: 0 5px;
-  }
   > * {
     border-bottom: 1px solid #303030;
   }

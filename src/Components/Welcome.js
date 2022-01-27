@@ -24,37 +24,34 @@ const Welcome  = (props) => {
 
 const Intro = styled(SharedCard)`
     outline: none;
-    padding: 0.5rem;
-    margin: 10%;
-    @media (min-width: 768px) {
-        width: 90%;
-        margin-bottom: 20%;
+    width: 90%;
+    margin-bottom: 10%;
+    @media (max-width: 768px) {
+
     }
 `;
 
 const Title = styled.div`
     margin-top: 10%;
+    margin-right: 20px;
+    margin-bottom: 20%;
     font-size: 4rem;
     text-align: left;
     padding: 4px;
-    @media (min-width: 768px) {
-        margin-top: 10%;
-        margin-right: 20px;
-        margin-bottom: 20%;
+    @media (max-width: 768px) {
+        font-size: 3rem;
     }
 `;
 
 const Subtitle = styled.div`
-    margin-left: 20%;
+    margin-left: 50%;
     margin-bottom: 10%;
     font-size: 2rem;
     text-align: left;
-    padding-top: 25%;
-    padding-bottom: 10%;
-    @media (min-width: 768px) {
-        margin-top: 30px;
-        margin-left: 50%;
-        padding: 0px;
+    @media (max-width: 768px) {
+        padding-top: 25%;
+        padding-bottom: 10%;
+        margin-left: 0;
     }
 `;
 
