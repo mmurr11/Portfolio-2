@@ -25,14 +25,13 @@ const Welcome  = (props) => {
 const Intro = styled(SharedCard)`
     outline: none;
     width: 90%;
-    margin-bottom: 10%;
+    margin: 10% ;
     @media (max-width: 768px) {
 
     }
 `;
 
 const Title = styled.div`
-    margin-top: 10%;
     margin-right: 20px;
     margin-bottom: 20%;
     font-size: 4rem;

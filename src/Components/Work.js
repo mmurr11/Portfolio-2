@@ -5,8 +5,25 @@ const Work = (props) => {
     return (
         <Container id="container">
             
+            <ProjectCard className="projectCard" id='hubbel'>
+                <PhotoContainer className="photoContainer" >
+                    <Photo className='photo'>
+                        <Links className="links">                    
+                        
+                            <a href='#'>
+                                <button>Code</button>
+                            </a>
+                            <a href='#'>
+                                <button>Demo</button>
+                            </a>
+                                                   
+                         </Links>   
+                    </Photo>                                         
+                </PhotoContainer>
+            </ProjectCard>
             <ProjectCard className="projectCard">
                 <PhotoContainer className="photoContainer" >
+                    <Photo className='photo'>
                         <Links className="links">                    
                                 
                             <a href='#'>
@@ -16,11 +33,13 @@ const Work = (props) => {
                                 <button>Demo</button>
                             </a>
                                                    
-                         </Links>                                       
+                         </Links>   
+                    </Photo>                                         
                 </PhotoContainer>
             </ProjectCard>
             <ProjectCard className="projectCard">
                 <PhotoContainer className="photoContainer" >
+                    <Photo className='photo'>
                         <Links className="links">                    
                                 
                             <a href='#'>
@@ -30,11 +49,13 @@ const Work = (props) => {
                                 <button>Demo</button>
                             </a>
                                                    
-                         </Links>                                       
+                         </Links>   
+                    </Photo>                                         
                 </PhotoContainer>
             </ProjectCard>
             <ProjectCard className="projectCard">
                 <PhotoContainer className="photoContainer" >
+                    <Photo className='photo'>
                         <Links className="links">                    
                                 
                             <a href='#'>
@@ -44,23 +65,11 @@ const Work = (props) => {
                                 <button>Demo</button>
                             </a>
                                                    
-                         </Links>                                       
+                         </Links>   
+                    </Photo>                                         
                 </PhotoContainer>
             </ProjectCard>
-            <ProjectCard className="projectCard">
-                <PhotoContainer className="photoContainer" >
-                        <Links className="links">                    
-                                
-                            <a href='#'>
-                                <button>Code</button>
-                            </a>
-                            <a href='#'>
-                                <button>Demo</button>
-                            </a>
-                                                   
-                         </Links>                                       
-                </PhotoContainer>
-            </ProjectCard>
+
             
 
         </Container>
@@ -68,14 +77,19 @@ const Work = (props) => {
 };
 
 const Container = styled.div`
+    margin: 10%;
     position: relative;
-    align-items: center;
-    display: flex;  
-    flex-direction: row; 
-    justify-content: space-between;   
-    width: 90%;
+    display: grid; 
+    grid-gap: 15rem;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+    min-width: 70%;
     @media (max-width: 768px) {
+        display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
 `;
 
@@ -87,16 +101,29 @@ const ProjectCard = styled.div`
   position: relative;
   border: none;
   box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
-  width: 20%;
-  @media (min-width: 768px) {
-    }
+  min-width: 30rem;
+  height: 45rem;
+  @media (max-width: 768px) {
+    min-width: 100%;
+  }
 `;
 
 const PhotoContainer = styled.div`
+  
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   word-wrap: break-word;
   word-break: break-word;
-  height: 32.5em;
+  height: auto;
+`;
+
+const Photo = styled.div`
+    
+    border-radius: 7%;
+    transition: box-shadow 83ms;
+    border: none;
+    min-width: 101%;
+    height: 101%;
+    margin: auto;
 `;
 
 const Links = styled.div`
@@ -111,7 +138,7 @@ const Links = styled.div`
             background: none;
             button {
                 background: none; 
-                width: 6rem;
+                min-width: 6rem;
                 font-size: 1.4rem;
                 font-weight: 800;
                 line-height: 1;
@@ -119,10 +146,11 @@ const Links = styled.div`
                 margin: 10%;
                 &:hover {
                     color: #2557a7;
+                    transition: 0.75s;
                 }
             }
         
-}
+        }
 `;
 
 export default Work
