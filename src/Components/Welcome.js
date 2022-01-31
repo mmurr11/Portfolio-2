@@ -26,6 +26,7 @@ const Intro = styled(SharedCard)`
     outline: none;
     width: 90%;
     margin: 10% ;
+    border-bottom: 1px solid #303030;
     @media (max-width: 768px) {
 
     }

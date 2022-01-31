@@ -23,9 +23,7 @@ const Layout = styled.div`
   align-items: center;
   overflow: none;
   background-color: #202020;
-  > * {
-    border-bottom: 1px solid #303030;
-  }
+  
 `;
 
 export default Home;

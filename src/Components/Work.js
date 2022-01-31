@@ -5,9 +5,9 @@ const Work = (props) => {
     return (
         <Container id="container">
             
-            <ProjectCard className="projectCard" id='hubbel'>
+            <ProjectCard className="projectCard">
                 <PhotoContainer className="photoContainer" >
-                    <Photo className='photo'>
+                    <Photo className='photo' id='hubbel'>
                         <Links className="links">                    
                         
                             <a href='#'>
@@ -78,13 +78,15 @@ const Work = (props) => {
 
 const Container = styled.div`
     margin: 10%;
+    padding-bottom: 10%;
     position: relative;
     display: grid; 
     grid-gap: 15rem;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     justify-content: space-evenly;
-    min-width: 70%;
+    width: 70%;
+    border-bottom: 1px solid #303030;
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
@@ -101,29 +103,25 @@ const ProjectCard = styled.div`
   position: relative;
   border: none;
   box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
-  min-width: 30rem;
+  width: 30rem;
   height: 45rem;
   @media (max-width: 768px) {
-    min-width: 100%;
+    width: 100%;
   }
 `;
 
 const PhotoContainer = styled.div`
   
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   word-wrap: break-word;
   word-break: break-word;
-  height: auto;
 `;
 
 const Photo = styled.div`
-    
     border-radius: 7%;
     transition: box-shadow 83ms;
     border: none;
-    min-width: 101%;
-    height: 101%;
-    margin: auto;
+    width: 30em;
+    height: 45em;
 `;
 
 const Links = styled.div`
@@ -138,7 +136,7 @@ const Links = styled.div`
             background: none;
             button {
                 background: none; 
-                min-width: 6rem;
+                width: 6rem;
                 font-size: 1.4rem;
                 font-weight: 800;
                 line-height: 1;
@@ -146,11 +144,13 @@ const Links = styled.div`
                 margin: 10%;
                 &:hover {
                     color: #2557a7;
-                    transition: 0.75s;
+                    transition: 0.25s;
                 }
             }
         
         }
 `;
+
+document.getElementById('hubbel').style.backgroundImage = 'url(https://i.imgur.com/rEqOeM1.png)'
 
 export default Work
