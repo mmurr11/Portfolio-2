@@ -6,20 +6,24 @@ const Work = (props) => {
         <Container id="container">
             
             <ProjectCard className="projectCard">
-                <PhotoContainer className="photoContainer" >
-                    <Photo className='photo' id='hubbel'>
-                        <Links className="links">                    
-                        
-                            <a href='#'>
-                                <button>Code</button>
-                            </a>
-                            <a href='#'>
-                                <button>Demo</button>
-                            </a>
-                                                   
-                         </Links>   
-                    </Photo>                                         
-                </PhotoContainer>
+                <ProjectName>
+                    <a>hubbel.crypto</a>
+                </ProjectName>
+                    <PhotoContainer className="photoContainer" >
+                        <Photo className='photo' id='hubbel'>
+                            <img src='https://i.imgur.com/rEqOeM1.png' />
+                            <Links className="links">                    
+                            
+                                <a href='#'>
+                                    <button>Code</button>
+                                </a>
+                                <a href='#'>
+                                    <button>Demo</button>
+                                </a>
+                                                    
+                            </Links>   
+                        </Photo>                                         
+                    </PhotoContainer>
             </ProjectCard>
             <ProjectCard className="projectCard">
                 <PhotoContainer className="photoContainer" >
@@ -101,27 +105,47 @@ const ProjectCard = styled.div`
   border-radius: 7.5%;
   transition: box-shadow 83ms;
   position: relative;
-  border: none;
-  box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
-  width: 30rem;
-  height: 45rem;
+  border: solid 1px #181818;
+  width: 35rem;
+  height: 50rem;
   @media (max-width: 768px) {
     width: 100%;
   }
 `;
 
+const ProjectName = styled.div`
+    background-color: #202020;
+    min-height: 1.9rem;
+    text-align: center;
+    border: none;
+    padding: 0.75rem;
+    a {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1;
+        border: none;
+        background: transparent;
+    }
+`;
+
 const PhotoContainer = styled.div`
-  
+  border-radius: 7.5%;
   word-wrap: break-word;
   word-break: break-word;
 `;
 
 const Photo = styled.div`
-    border-radius: 7%;
-    transition: box-shadow 83ms;
     border: none;
-    width: 30em;
-    height: 45em;
+    
+    img {
+        position: relative;
+        object-fit: cover;
+        border: none;
+        width: 35rem;
+        height: 50rem;
+        border-bottom-left-radius: 7.5%;
+        border-bottom-right-radius: 7.5%;
+    }
 `;
 
 const Links = styled.div`
@@ -129,7 +153,7 @@ const Links = styled.div`
     bottom: 0; 
     display: flex;  
     flex-direction: row; 
-    margin: 0 24%;
+    margin: -11% 33%;
     background: none;
         a {
             justify-content: space-between;
@@ -137,20 +161,20 @@ const Links = styled.div`
             button {
                 background: none; 
                 width: 6rem;
-                font-size: 1.4rem;
-                font-weight: 800;
-                line-height: 1;
+                font-size: 1.5rem;
+                font-weight: 1000;
+                color: #c7c7c7;
+                -webkit-text-stroke-width: 0.5px;
+                -webkit-text-stroke-color: #000;
                 border: none;
                 margin: 10%;
                 &:hover {
-                    color: #2557a7;
+                    color: #627eea;
                     transition: 0.25s;
                 }
             }
         
         }
 `;
-
-document.getElementById('hubbel').style.backgroundImage = 'url(https://i.imgur.com/rEqOeM1.png)'
 
 export default Work
