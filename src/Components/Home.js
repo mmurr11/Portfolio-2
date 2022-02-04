@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Clients from './Clients'
+// import Clients from './Clients'
 import Contact from './Contact'
 import Welcome from './Welcome'
 import Work from './Work'
@@ -9,7 +9,6 @@ const Home = (props) => {
         <Layout>
             <Welcome />
             <Work />
-            <Clients />
             <Contact />
         </Layout>
     );
