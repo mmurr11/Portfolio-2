@@ -81,7 +81,7 @@ const Work = (props) => {
 };
 
 const Container = styled.div`
-    margin: 10%;
+    margin-bottom: 10%;
     padding-bottom: 10%;
     position: relative;
     display: grid; 
@@ -135,8 +135,7 @@ const PhotoContainer = styled.div`
 `;
 
 const Photo = styled.div`
-    border: none;
-    
+    border: none;    
     img {
         position: relative;
         object-fit: cover;

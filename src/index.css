@@ -37,6 +37,7 @@ ul {
   outline: none;
   vertical-align: baseline;
   background: transparent;
+  text-decoration: none;
 }
 
 body {
