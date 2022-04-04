@@ -2,30 +2,30 @@ html {
   font-size: 62.5%;
 }
 
-body{
+body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 * {
   color: #c7c7c7;
-  background-color: #181818;
+  background-color: #202020;
   box-sizing: border-box;
 }
 
-div, 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6, 
-header, 
-html, 
-i, 
-img, 
-label, 
-li, 
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+img,
+label,
+li,
 nav,
 p,
 small,
