@@ -18,7 +18,6 @@ const Layout = styled.div`
   display: flex;
   flex-direction: column;
   column-gap: 10%;
-  align-items: center;
   overflow: none;
   background-color: #202020;
 `;
