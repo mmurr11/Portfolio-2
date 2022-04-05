@@ -25,6 +25,17 @@ const Welcome = (props) => {
           <img src={MMlogo} />
         </div>
       </div>
+      <div className="container-right">
+        <div className="background-cover">
+          <div className="intro">
+            <p>
+              Hey, my name is Matthew Murray. I'm a web developer based in
+              Birmingham Al. Thanks for checking out my work. If you're looking
+              to hire me, just click "say hello" below.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

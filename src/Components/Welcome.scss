@@ -12,7 +12,6 @@
     display: flex;
     justify-content: left;
     align-items: left;
-    border-right: 2px solid #fff;
     margin: 0;
     padding-right: 20%;
 
@@ -106,9 +105,9 @@
   }
 
   .logo {
-    width: 20vh;
-    height: 20vh;
-    z-index: 2;
+    width: 15vh;
+    height: 15vh;
+    z-index: 3;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -118,15 +117,41 @@
 
     .logoCircle {
       background: #202020;
-      z-index: 3;
       border-radius: 50%;
-      outline: 2px solid #fff;
+      outline: 5px solid #ffb510;
       align-items: center;
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+  }
+
+  .container-right {
+    background-image: url("../images/alabamatheater.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin: 0;
+    background-attachment: fixed;
+    background-position: right;
+
+    .background-cover {
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+      background-color: #ddd;
+
+      .intro {
+        width: 50%;
+        height: 50%;
+        position: relative;
       }
     }
   }
