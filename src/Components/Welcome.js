@@ -21,7 +21,9 @@ const Welcome = (props) => {
         </div>
       </div>
       <div className="logo">
-        <img src={MMlogo} />
+        <div className="logoCircle">
+          <img src={MMlogo} />
+        </div>
       </div>
     </div>
   );

@@ -107,12 +107,20 @@
   }
 
   .logo {
-    width: 30%;
-    height: 30%;
+    width: 200px;
+    height: 200px;
     position: relative;
-    align-items: left;
-    left: -5%;
+    left: -5.25%;
     z-index: 2;
+
+    .logoCircle {
+      background: #202020;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      border-radius: 50%;
+      outline: 1px solid #fff;
+    }
   }
 }
 
