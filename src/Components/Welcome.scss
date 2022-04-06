@@ -79,9 +79,6 @@
         align-items: center;
         height: 70%;
         margin-top: 10%;
-        > * {
-          color: #e91e63;
-        }
 
         .block {
           width: 0%;
@@ -102,7 +99,7 @@
           text-transform: uppercase;
           letter-spacing: 5px;
           z-index: 3;
-          color: #e91e63 !important;
+          color: inherit;
         }
 
         .subtitle {
@@ -160,20 +157,22 @@
         width: 100%;
         height: 100%;
         opacity: 0.8;
-        background-color: #ddd;
-        justify-content: center;
+        background-color: #fff;
 
         .intro {
-          width: 55vh;
-          height: 30vh;
+          margin: 15% 7%;
+          width: 75rem;
+          height: 35rem;
           z-index: 4;
-          top: 35%;
           background: transparent;
-          right: 8%;
           opacity: 1;
           position: absolute;
+          border: 8px solid #202020;
+          align-items: center;
 
           p {
+            padding: 5%;
+            padding-top: 6%;
             text-align: left;
             font-family: "arial";
             color: #202020;
@@ -271,7 +270,7 @@
     opacity: 0;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
   }
 }
 

@@ -33,7 +33,9 @@ const Welcome = (props) => {
                 <br />
                 Thanks for checking out my work.
                 <br />
-                If you're looking to hire me, just click "say hello" below.
+                If you're looking to hire me,
+                <br />
+                just click "say hello" below.
               </p>
             </div>
           </div>
