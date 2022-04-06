@@ -1,5 +1,4 @@
 import "./Welcome.scss";
-import styled from "styled-components";
 let MMlogo = require("../images/fusciaMM.png");
 
 const Welcome = (props) => {
@@ -9,14 +8,12 @@ const Welcome = (props) => {
         <div class="box">
           <div class="title">
             <span class="block"></span>
-            <h1>
-              Hey, I'm Matthew<span></span>
-            </h1>
+            <h1>Matthew Murray</h1>
           </div>
 
           <div class="role">
             <div class="block"></div>
-            <p>Front-end web developer</p>
+            <p className="subtitle">Front-end web developer</p>
           </div>
         </div>
       </div>
@@ -26,13 +23,19 @@ const Welcome = (props) => {
         </div>
       </div>
       <div className="container-right">
-        <div className="background-cover">
-          <div className="intro">
-            <p>
-              Hey, my name is Matthew Murray. I'm a web developer based in
-              Birmingham Al. Thanks for checking out my work. If you're looking
-              to hire me, just click "say hello" below.
-            </p>
+        <div className="background-image">
+          <div className="background-cover">
+            <div className="intro">
+              <p>
+                Hey, I'm Matthew.
+                <br />
+                I'm a web developer based in Birmingham Al.
+                <br />
+                Thanks for checking out my work.
+                <br />
+                If you're looking to hire me, just click "say hello" below.
+              </p>
+            </div>
           </div>
         </div>
       </div>
