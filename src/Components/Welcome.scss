@@ -3,188 +3,231 @@
 .container-container {
   display: flex;
   flex-direction: row;
+  margin-bottom: 10%;
+  @media screen and (max-width: 1300px) {
+    flex-direction: column;
+  }
+}
 
-  .container-left {
-    width: 50%;
-    height: 100vh;
-    background: #202020;
-    z-index: 1;
+.container-left {
+  width: 50%;
+  height: 100vh;
+  background: #202020;
+  z-index: 1;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin: 0;
+  padding-right: 20%;
+  border-right: 4px solid #ffb510;
+  @media screen and (max-width: 1300px) {
+    width: 100%;
+    height: 50vh;
+    border-right: none;
+    border-bottom: 4px solid #ffb510;
+  }
+
+  .box {
+    width: 25rem;
+    height: 25rem;
+    position: relative;
+    margin: 50% 10rem;
     display: flex;
     justify-content: left;
-    align-items: left;
-    margin: 0;
-    padding-right: 20%;
+    flex-direction: column;
+    margin-right: 20%;
+    @media screen and (max-width: 1300px) {
+      margin: 10%;
+    }
 
-    .box {
-      width: 250px;
-      height: 250px;
+    .title {
+      width: 170%;
       position: relative;
-      margin: 50% 20%;
       display: flex;
-      justify-content: left;
-      flex-direction: column;
-      margin-right: 20%;
+      align-items: center;
+      height: 90%;
 
-      .title {
-        width: 170%;
-        position: relative;
+      .block {
+        width: 0%;
+        height: inherit;
+        background: #ffb510;
+        position: absolute;
+        animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
         display: flex;
-        align-items: center;
-        height: 90%;
-
-        .block {
-          width: 0%;
-          height: inherit;
-          background: #ffb510;
-          position: absolute;
-          animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-          display: flex;
-        }
-
-        h1 {
-          font-family: "Poppins";
-          color: #fff;
-          font-size: 8rem;
-          -webkit-animation: mainFadeIn 2s forwards;
-          -o-animation: mainFadeIn 2s forwards;
-          animation: mainFadeIn 2s forwards;
-          animation-delay: 1.6s;
-          opacity: 0;
-          display: flex;
-          align-items: baseline;
-          position: relative;
-
-          span {
-            width: 0px;
-            height: 0px;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
-
-            background: #ffb510;
-            -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92)
-              forwards;
-            animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
-            animation-delay: 2s;
-            position: absolute;
-            right: -12px;
-          }
-        }
       }
 
-      .role {
-        width: 100%;
-        position: relative;
+      h1 {
+        font-family: "Poppins";
+        color: #fff;
+        font-size: 8rem;
+        -webkit-animation: mainFadeIn 2s forwards;
+        -o-animation: mainFadeIn 2s forwards;
+        animation: mainFadeIn 2s forwards;
+        animation-delay: 1.6s;
+        opacity: 0;
         display: flex;
-        align-items: center;
-        height: 70%;
-        margin-top: 10%;
+        align-items: baseline;
+        position: relative;
 
-        .block {
-          width: 0%;
-          height: 100%;
-          background: #e91e63 !important;
-          position: absolute;
-          animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+        span {
+          width: 0px;
+          height: 0px;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+
+          background: #ffb510;
+          -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92)
+            forwards;
+          animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
           animation-delay: 2s;
-          display: flex;
-        }
-
-        .subtitle {
-          animation: secFadeIn 2s forwards;
-          animation-delay: 3.2s;
-          opacity: 0;
-          font-weight: 800;
-          font-size: 3rem;
-          text-transform: uppercase;
-          letter-spacing: 5px;
-          z-index: 3;
-          color: inherit;
-        }
-
-        .subtitle {
-          color: #e91e63 !important;
+          position: absolute;
+          right: -12px;
         }
       }
     }
-  }
 
-  .logo {
-    width: 15vh;
-    height: 15vh;
-    z-index: 3;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    .role {
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 70%;
+      margin-top: 10%;
+
+      .block {
+        width: 0%;
+        height: 100%;
+        background: #e91e63 !important;
+        position: absolute;
+        animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+        animation-delay: 2s;
+        display: flex;
+      }
+
+      .subtitle {
+        animation: secFadeIn 2s forwards;
+        animation-delay: 3.2s;
+        opacity: 0;
+        font-weight: 800;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        z-index: 3;
+        color: inherit;
+      }
+
+      .subtitle {
+        color: #e91e63 !important;
+      }
+    }
+  }
+}
+
+.logo {
+  width: 15vh;
+  height: 15vh;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  align-items: center;
+
+  .logoCircle {
+    background: #202020;
+    border-radius: 50%;
+    outline: 5px solid #ffb510;
     align-items: center;
 
-    .logoCircle {
-      background: #202020;
-      border-radius: 50%;
-      outline: 5px solid #ffb510;
-      align-items: center;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  .container-right {
-    display: flex;
-    width: 50%;
-    height: 100vh;
-    justify-content: right;
-    align-items: right;
-    background: #202020;
-    z-index: 2;
-
-    .background-image {
-      background-image: url("../images/alabamatheater.jpg");
-      background-attachment: fixed;
-      background-size: 50% 100%;
-      background-repeat: no-repeat;
-      background-position: right;
+    img {
       width: 100%;
       height: 100%;
-      // filter: blur(2px);
+      object-fit: cover;
+    }
+  }
+}
 
-      .background-cover {
-        width: 100%;
-        height: 100%;
-        opacity: 0.8;
-        background-color: #fff;
+.container-right {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+  justify-content: right;
+  align-items: right;
+  background: #202020;
+  z-index: 2;
+  @media screen and (max-width: 1300px) {
+    width: 100%;
+    height: 50vh;
+  }
 
-        .intro {
-          margin: 15% 7%;
-          width: 75rem;
-          height: 35rem;
-          z-index: 4;
-          background: transparent;
-          opacity: 1;
-          position: absolute;
-          border: 8px solid #202020;
-          align-items: center;
+  .background-image {
+    background-image: url("../images/alabamatheater.jpg");
+    background-attachment: fixed;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    height: 100%;
+    // filter: blur(2px);
+    @media screen and (max-width: 1300px) {
+      background-size: 100% 100%;
+    }
 
-          p {
-            padding: 5%;
-            padding-top: 6%;
-            text-align: left;
-            font-family: "arial";
-            color: #202020;
-            font-size: 3rem;
-            font-weight: 600;
-            letter-spacing: 5;
-            line-height: 5rem;
-            animation: fadeIn 5s;
-            -webkit-animation: fadeIn 5s;
-            -moz-animation: fadeIn 5s;
-            -o-animation: fadeIn 5s;
-            -ms-animation: fadeIn 5s;
+    .background-cover {
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .intro {
+        margin: 10%;
+        width: 75%;
+        height: 40%;
+        z-index: 4;
+        background: transparent;
+        opacity: 1;
+        border: 8px solid #202020;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        @media screen and (max-width: 1300px) {
+          margin-top: 18%;
+          width: 65%;
+          height: 70%;
+        }
+
+        p {
+          overflow-wrap: break-word;
+          padding: 5%;
+          padding-top: 6%;
+          text-align: left;
+          font-family: "arial";
+          color: #202020;
+          font-size: 3rem;
+          font-weight: 600;
+          letter-spacing: 5;
+          line-height: 5rem;
+          animation: fadeIn 5s;
+          -webkit-animation: fadeIn 5s;
+          -moz-animation: fadeIn 5s;
+          -o-animation: fadeIn 5s;
+          -ms-animation: fadeIn 5s;
+          @media screen and (max-width: 1300px) {
+            padding: 5% !important;
+          }
+          @media screen and (max-width: 1000px) {
+            font-size: x-large;
+            font-weight: bolder;
+          }
+
+          @media screen and (max-width: 768px) {
+            font-size: large;
+            font-weight: bolder;
           }
         }
       }
