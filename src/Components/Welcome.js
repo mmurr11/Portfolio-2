@@ -29,13 +29,15 @@ const Welcome = (props) => {
               <p>
                 Hey, I'm Matthew.
                 <br />
-                I'm a web developer based in Birmingham Al.
+                I'm a web developer based in Birmingham AL.
                 <br />
                 Thanks for checking out my work.
                 <br />
-                If you're looking to hire me,
+                If you're looking to collaborate or hire,
                 <br />
-                just click "say hello" below.
+                then check out my socials below
+                <br />
+                or just click 'say hello'.
               </p>
             </div>
           </div>

@@ -10,8 +10,8 @@
 }
 
 .container-left {
-  width: 50%;
-  height: 100vh;
+  min-width: 50vw;
+  min-height: 100vh;
   background: #202020;
   z-index: 1;
   display: flex;
@@ -21,10 +21,11 @@
   padding-right: 20%;
   border-right: 4px solid #ffb510;
   @media screen and (max-width: 1300px) {
-    width: 100%;
-    height: 50vh;
+    min-width: 100%;
+    min-height: 50vh;
     border-right: none;
     border-bottom: 4px solid #ffb510;
+    padding-right: 0;
   }
 
   .box {
@@ -41,15 +42,17 @@
     }
 
     .title {
-      width: 170%;
+      width: 165%;
       position: relative;
       display: flex;
       align-items: center;
       height: 90%;
+      @media screen and (max-width: 1300px) {
+      }
 
       .block {
         width: 0%;
-        height: inherit;
+        height: 85%;
         background: #ffb510;
         position: absolute;
         animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
@@ -59,7 +62,7 @@
       h1 {
         font-family: "Poppins";
         color: #fff;
-        font-size: 8rem;
+        font-size: clamp(5.5rem, 10vw + 2rem, 10rem);
         -webkit-animation: mainFadeIn 2s forwards;
         -o-animation: mainFadeIn 2s forwards;
         animation: mainFadeIn 2s forwards;
@@ -110,7 +113,7 @@
         animation-delay: 3.2s;
         opacity: 0;
         font-weight: 800;
-        font-size: 3rem;
+        font-size: clamp(1.62rem, 0.88rem + 1.22vw, 3rem);
         text-transform: uppercase;
         letter-spacing: 5px;
         z-index: 3;
@@ -125,12 +128,12 @@
 }
 
 .logo {
-  width: 15vh;
-  height: 15vh;
+  max-width: 15vh;
+  max-height: 15vh;
   z-index: 3;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50vh;
+  left: 50vw;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   align-items: center;
@@ -151,15 +154,15 @@
 
 .container-right {
   display: flex;
-  width: 50%;
-  height: 100vh;
+  min-width: 50vw;
+  min-height: 100vh;
   justify-content: right;
   align-items: right;
   background: #202020;
   z-index: 2;
   @media screen and (max-width: 1300px) {
-    width: 100%;
-    height: 50vh;
+    min-width: 100%;
+    min-height: 50vh;
   }
 
   .background-image {
@@ -168,8 +171,8 @@
     background-size: 50% 100%;
     background-repeat: no-repeat;
     background-position: right;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     // filter: blur(2px);
     @media screen and (max-width: 1300px) {
       background-size: 100% 100%;
@@ -186,8 +189,8 @@
 
       .intro {
         margin: 10%;
-        width: 75%;
-        height: 40%;
+        min-width: 75%;
+        min-height: 40%;
         z-index: 4;
         background: transparent;
         opacity: 1;
@@ -195,23 +198,23 @@
         align-items: center;
         display: flex;
         justify-content: center;
+        border-radius: 15px;
         @media screen and (max-width: 1300px) {
           margin-top: 18%;
-          width: 65%;
-          height: 70%;
+          max-width: 65%;
+          max-height: 70%;
         }
 
         p {
           overflow-wrap: break-word;
-          padding: 5%;
-          padding-top: 6%;
+          margin: 0 auto;
           text-align: left;
           font-family: "arial";
           color: #202020;
-          font-size: 3rem;
+          font-size: clamp(2rem, 1vw + 1rem, 3.5rem);
           font-weight: 600;
           letter-spacing: 5;
-          line-height: 5rem;
+          line-height: max(2.5rem, 1.5vw + 2rem);
           animation: fadeIn 5s;
           -webkit-animation: fadeIn 5s;
           -moz-animation: fadeIn 5s;
@@ -221,14 +224,12 @@
             padding: 5% !important;
           }
           @media screen and (max-width: 1000px) {
-            font-size: x-large;
             font-weight: bolder;
           }
 
           @media screen and (max-width: 768px) {
-            font-size: large;
             font-weight: bolder;
-            line-height: 4rem;
+            // line-height: 4rem;
           }
         }
       }
