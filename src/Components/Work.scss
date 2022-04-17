@@ -92,7 +92,6 @@ $accent-color: #ffb510;
   .inner {
     height: 100%;
     display: grid;
-    padding: 1em;
     transform: translateZ(80px) scale(0.94);
   }
 }
@@ -149,7 +148,7 @@ $accent-color: #ffb510;
 
   .about {
     display: flex;
-    max-height: 100%;
+    height: 80%;
     max-width: 100%;
     overflow: scroll;
     overflow-x: hidden;
@@ -159,12 +158,11 @@ $accent-color: #ffb510;
     text-align: left;
     padding-left: 2.5%;
     font-size: clamp(1rem, 0.88rem + 1.22vw, 2rem);
-    line-height: clamp(1rem, 0.88rem + 1.22vw, 3rem);
+    line-height: clamp(1rem, 0.88rem + 1.22vw, 2.8rem);
     letter-spacing: 1px;
     font-family: "arial";
     color: #202020;
     margin-top: 1em;
-    margin-bottom: 1em;
 
     h3 {
       color: #e91e53;
@@ -185,9 +183,14 @@ $accent-color: #ffb510;
     flex-direction: row;
     justify-content: space-between;
     color: #e91e53 !important;
+    margin-top: 4%;
 
     a {
       text-decoration: none;
+    }
+
+    .button {
+      margin-bottom: 0em;
     }
   }
 }
@@ -208,6 +211,7 @@ $accent-color: #ffb510;
   padding: 0 1.5em;
   height: 3em;
   line-height: 3.2em;
+  margin-bottom: 0.5em;
   min-width: 12.5%;
   background-color: #fff;
   outline: 2px solid #ffb510;

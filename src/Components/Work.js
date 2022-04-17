@@ -29,27 +29,40 @@ const Work = (props) => {
                 <div className="about">
                   <h3>What is this project?</h3>
                   <p>
-                    This is a full stack, simplified Reddit clone. Fully
-                    functional CRUD and user authentication system with cookies
-                    to store a session ID. The website is fully responsive. The
-                    frontend is hosted on Vercel and the backend is hosted on
-                    Heroku.
+                    This is a simple todo SPA. It was my introduction into React
+                    functional components and state management. It also made me
+                    realize how awesome UI libraries like MUI are!
                   </p>
                   <h3>What technologies are used?</h3>
                   <ul>
-                    <li>Typescript</li>
                     <li>React</li>
-                    <li>GraphQl</li>
-                    <li>Next.js</li>
-                    <li>Redis</li>
-                    <li>Postgres</li>
-                    <li>TypeORM</li>
-                    <li>Docker</li>
+                    <li>Redux</li>
+                    <li>Material UI</li>
                   </ul>
                 </div>
-                <label for="card1" className="button return" aria-hidden="true">
-                  <span className="btnText">Flip</span>
-                </label>
+                <div className="buttonWrapper">
+                  <a
+                    href="https://github.com/mmurr11/Planner-CRUD"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <label class="button" aria-hidden="true">
+                      <span className="btnText">Code</span>
+                    </label>
+                  </a>
+                  <label for="card1" class="button return" aria-hidden="true">
+                    <span className="btnText">Flip</span>
+                  </label>
+                  <a
+                    href="https://mmurr11.github.io/Planner-CRUD/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <label class="button" aria-hidden="true">
+                      <span className="btnText">Demo</span>
+                    </label>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -66,7 +79,7 @@ const Work = (props) => {
             <div className="front" id="card2Front">
               <div className="inner">
                 <h2>Fullstack Reddit Clone</h2>
-                <label for="card2" className="button return" aria-hidden="true">
+                <label for="card2" class="button return" aria-hidden="true">
                   <span className="btnText">Details</span>
                 </label>
               </div>
@@ -105,7 +118,7 @@ const Work = (props) => {
                     </label>
                   </a>
                   <label for="card2" class="button return" aria-hidden="true">
-                    <span className="btnText">Return</span>
+                    <span className="btnText">Flip</span>
                   </label>
                   <a
                     href="https://fake-reddit-1.vercel.app/"
@@ -143,27 +156,40 @@ const Work = (props) => {
                 <div className="about">
                   <h3>What is this project?</h3>
                   <p>
-                    This is a full stack, simplified Reddit clone. Fully
-                    functional CRUD and user authentication system with cookies
-                    to store a session ID. The website is fully responsive. The
-                    frontend is hosted on Vercel and the backend is hosted on
-                    Heroku.
+                    This is a front facing replica of LinkedIn's home and login
+                    pages. This was my attempt at recreating what LinkedIn looks
+                    like through code.
                   </p>
                   <h3>What technologies are used?</h3>
                   <ul>
-                    <li>Typescript</li>
+                    <li>JavaScript</li>
                     <li>React</li>
-                    <li>GraphQl</li>
-                    <li>Next.js</li>
-                    <li>Redis</li>
-                    <li>Postgres</li>
-                    <li>TypeORM</li>
-                    <li>Docker</li>
+                    <li>Styled Components</li>
                   </ul>
                 </div>
-                <label for="card3" class="button return" aria-hidden="true">
-                  <span className="btnText">Flip</span>
-                </label>
+                <div className="buttonWrapper">
+                  <a
+                    href="https://github.com/mmurr11/linkedin-clone"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <label class="button" aria-hidden="true">
+                      <span className="btnText">Code</span>
+                    </label>
+                  </a>
+                  <label for="card3" class="button return" aria-hidden="true">
+                    <span className="btnText">Flip</span>
+                  </label>
+                  <a
+                    href="https://mmurr11.github.io/linkedin-clone/#/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <label class="button" aria-hidden="true">
+                      <span className="btnText">Demo</span>
+                    </label>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -190,27 +216,44 @@ const Work = (props) => {
                 <div className="about">
                   <h3>What is this project?</h3>
                   <p>
-                    This is a full stack, simplified Reddit clone. Fully
-                    functional CRUD and user authentication system with cookies
-                    to store a session ID. The website is fully responsive. The
-                    frontend is hosted on Vercel and the backend is hosted on
-                    Heroku.
+                    This is a full stack decentralized cryptocurrency exchange.
+                    You can login with A Metamask Ethereum wallet and swap any
+                    ERC-20 tokens. This was my first project and my introduction
+                    to web development.
                   </p>
                   <h3>What technologies are used?</h3>
                   <ul>
-                    <li>Typescript</li>
-                    <li>React</li>
-                    <li>GraphQl</li>
-                    <li>Next.js</li>
-                    <li>Redis</li>
-                    <li>Postgres</li>
-                    <li>TypeORM</li>
-                    <li>Docker</li>
+                    <li>JavaScript</li>
+                    <li>JQuery</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>REST API</li>
+                    <li>Morlais 1inch plugin</li>
                   </ul>
                 </div>
-                <label for="card4" class="button return" aria-hidden="true">
-                  <span className="btnText">Flip</span>
-                </label>
+                <div className="buttonWrapper">
+                  <a
+                    href="https://github.com/mmurr11/My-dex"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <label class="button" aria-hidden="true">
+                      <span className="btnText">Code</span>
+                    </label>
+                  </a>
+                  <label for="card4" class="button return" aria-hidden="true">
+                    <span className="btnText">Flip</span>
+                  </label>
+                  <a
+                    href="https://mmurr11.github.io/My-DEX/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <label class="button" aria-hidden="true">
+                      <span className="btnText">Demo</span>
+                    </label>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
