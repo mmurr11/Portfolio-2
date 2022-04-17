@@ -2,176 +2,218 @@ import "./Work.scss";
 
 const Work = (props) => {
   return (
-    <div className="wrapper">
-      <div className="card">
-        <input type="checkbox" id="card1" className="more" aria-hidden="true" />
-        <div className="content">
-          <div className="front">
-            <div className="inner">
-              <h2>Hubbel.crypto</h2>
-              <label for="card1" className="button" aria-hidden="true">
-                Details
-              </label>
+    <>
+      <span className="myWork">&lt;My Work /&gt;</span>
+      <div className="wrapper">
+        <div className="card">
+          <input
+            type="checkbox"
+            id="card1"
+            className="more"
+            aria-hidden="true"
+          />
+          <div className="content">
+            <div className="front" id="card1Front">
+              <div className="inner">
+                <h2>Simple todo SPA</h2>
+                <label for="card1" className="button" aria-hidden="true">
+                  <span className="btnText">Details</span>
+                </label>
+              </div>
+            </div>
+            <div className="back">
+              <div className="inner">
+                <div className="about">
+                  <h3>What is this project?</h3>
+                  <p>
+                    This is a full stack, simplified Reddit clone. Fully
+                    functional CRUD and user authentication system with cookies
+                    to store a session ID. The website is fully responsive. The
+                    frontend is hosted on Vercel and the backend is hosted on
+                    Heroku.
+                  </p>
+                  <h3>What technologies are used?</h3>
+                  <ul>
+                    <li>Typescript</li>
+                    <li>React</li>
+                    <li>GraphQl</li>
+                    <li>Next.js</li>
+                    <li>Redis</li>
+                    <li>Postgres</li>
+                    <li>TypeORM</li>
+                    <li>Docker</li>
+                  </ul>
+                </div>
+                <label for="card1" className="button return" aria-hidden="true">
+                  <span className="btnText">Flip</span>
+                </label>
+              </div>
             </div>
           </div>
-          <div className="back">
-            <div className="inner">
-              <label for="card1" className="button return" aria-hidden="true">
-                <i className="fas fa-arrow-left"></i>
-              </label>
+        </div>
+
+        <div className="card">
+          <input
+            type="checkbox"
+            id="card2"
+            className="more"
+            aria-hidden="true"
+          />
+          <div className="content">
+            <div className="front" id="card2Front">
+              <div className="inner">
+                <h2>Fullstack Reddit Clone</h2>
+                <label for="card2" className="button" aria-hidden="true">
+                  <span className="btnText">Details</span>
+                </label>
+              </div>
+            </div>
+            <div className="back">
+              <div className="inner">
+                <div className="about">
+                  <h3>What is this project?</h3>
+                  <p>
+                    This is a full stack, simplified Reddit clone. Fully
+                    functional CRUD and user authentication system with cookies
+                    to store a session ID. The website is fully responsive. The
+                    frontend is hosted on Vercel and the backend is hosted on
+                    Heroku.
+                  </p>
+                  <h3>What technologies are used?</h3>
+                  <ul>
+                    <li>Typescript</li>
+                    <li>React</li>
+                    <li>GraphQl</li>
+                    <li>Next.js</li>
+                    <li>Redis</li>
+                    <li>Postgres</li>
+                    <li>TypeORM</li>
+                    <li>Docker</li>
+                  </ul>
+                </div>
+                <div className="buttonWrapper">
+                  <a
+                    href="https://github.com/mmurr11/reddit-clone"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <label class="button" aria-hidden="true">
+                      <span className="btnText">Code</span>
+                    </label>
+                  </a>
+                  <a
+                    href="https://fake-reddit-1.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <label class="button" aria-hidden="true">
+                      <span className="btnText">Demo</span>
+                    </label>
+                  </a>
+                  <label for="card2" class="button return" aria-hidden="true">
+                    <span className="btnText">Return</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <input
+            type="checkbox"
+            id="card3"
+            className="more"
+            aria-hidden="true"
+          />
+          <div className="content">
+            <div className="front" id="card3Front">
+              <div className="inner">
+                <h2>LinkedIn Front-Facing Clone</h2>
+                <label for="card3" className="button" aria-hidden="true">
+                  <span className="btnText">Details</span>
+                </label>
+              </div>
+            </div>
+            <div className="back">
+              <div className="inner">
+                <div className="about">
+                  <h3>What is this project?</h3>
+                  <p>
+                    This is a full stack, simplified Reddit clone. Fully
+                    functional CRUD and user authentication system with cookies
+                    to store a session ID. The website is fully responsive. The
+                    frontend is hosted on Vercel and the backend is hosted on
+                    Heroku.
+                  </p>
+                  <h3>What technologies are used?</h3>
+                  <ul>
+                    <li>Typescript</li>
+                    <li>React</li>
+                    <li>GraphQl</li>
+                    <li>Next.js</li>
+                    <li>Redis</li>
+                    <li>Postgres</li>
+                    <li>TypeORM</li>
+                    <li>Docker</li>
+                  </ul>
+                </div>
+                <label for="card3" class="button return" aria-hidden="true">
+                  <span className="btnText">Flip</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <input
+            type="checkbox"
+            id="card4"
+            className="more"
+            aria-hidden="true"
+          />
+          <div className="content">
+            <div className="front" id="card4Front">
+              <div className="inner">
+                <h2>Hubbel.crypto</h2>
+                <label for="card4" className="button" aria-hidden="true">
+                  <span className="btnText">Details</span>
+                </label>
+              </div>
+            </div>
+            <div className="back">
+              <div className="inner">
+                <div className="about">
+                  <h3>What is this project?</h3>
+                  <p>
+                    This is a full stack, simplified Reddit clone. Fully
+                    functional CRUD and user authentication system with cookies
+                    to store a session ID. The website is fully responsive. The
+                    frontend is hosted on Vercel and the backend is hosted on
+                    Heroku.
+                  </p>
+                  <h3>What technologies are used?</h3>
+                  <ul>
+                    <li>Typescript</li>
+                    <li>React</li>
+                    <li>GraphQl</li>
+                    <li>Next.js</li>
+                    <li>Redis</li>
+                    <li>Postgres</li>
+                    <li>TypeORM</li>
+                    <li>Docker</li>
+                  </ul>
+                </div>
+                <label for="card4" class="button return" aria-hidden="true">
+                  <span className="btnText">Flip</span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="card">
-        <input type="checkbox" id="card1" className="more" aria-hidden="true" />
-        <div className="content">
-          <div className="front">
-            <div className="inner">
-              <h2>Hubbel.crypto</h2>
-              <label for="card1" className="button" aria-hidden="true">
-                Details
-              </label>
-            </div>
-          </div>
-          <div className="back">
-            <div className="inner">
-              <label for="card1" class="button return" aria-hidden="true">
-                <i className="fas fa-arrow-left"></i>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <input type="checkbox" id="card2" className="more" />
-        <div className="content">
-          <div className="front">
-            <div className="inner">
-              <h2>Modern flat</h2>
-              <label for="card2" className="button" aria-hidden="true">
-                Details
-              </label>
-            </div>
-          </div>
-          <div className="back">
-            <div className="inner">
-              <div className="info">
-                <span>4</span>
-                <div className="icon">
-                  <i className="fas fa-users"></i>
-                  <span>people</span>
-                </div>
-              </div>
-              <div className="info">
-                <span>3</span>
-                <div className="icon">
-                  <i className="fas fa-door-open"></i>
-                  <span>rooms</span>
-                </div>
-              </div>
-              <div className="info">
-                <span>2</span>
-                <div className="icon">
-                  <i className="fas fa-bed"></i>
-                  <span>beds</span>
-                </div>
-              </div>
-              <div className="info">
-                <span>1</span>
-                <div className="icon">
-                  <i className="fas fa-bath"></i>
-                  <span>bath</span>
-                </div>
-              </div>
-              <div className="description">
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Voluptatem unde ea voluptas fuga odio vel veniam eveniet,
-                  explicabo autem earum?
-                </p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet.</li>
-                  <li>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  </li>
-                  <li>Lorem ipsum dolor sit amet consectetur.</li>
-                  <li>Lorem ipsum dolor sit amet.</li>
-                </ul>
-              </div>
-              <div className="location">Warsaw, Poland</div>
-              <div className="price">42€ / day</div>
-              <label for="card2" className="button return" aria-hidden="true">
-                <i className="fas fa-arrow-left"></i>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="card">
-        <input type="checkbox" id="card3" className="more" />
-        <div className="content">
-          <div className="front">
-            <div className="inner">
-              <h2>Luxury property</h2>
-              <label for="card3" className="button" aria-hidden="true">
-                Details
-              </label>
-            </div>
-          </div>
-          <div className="back">
-            <div className="inner">
-              <div className="info">
-                <span>8</span>
-                <div className="icon">
-                  <i className="fas fa-users"></i>
-                  <span>people</span>
-                </div>
-              </div>
-              <div className="info">
-                <span>7</span>
-                <div className="icon">
-                  <i className="fas fa-door-open"></i>
-                  <span>rooms</span>
-                </div>
-              </div>
-              <div className="info">
-                <span>5</span>
-                <div className="icon">
-                  <i className="fas fa-bed"></i>
-                  <span>beds</span>
-                </div>
-              </div>
-              <div className="info">
-                <span>2</span>
-                <div className="icon">
-                  <i className="fas fa-bath"></i>
-                  <span>baths</span>
-                </div>
-              </div>
-              <div className="description">
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
-                  libero totam nostrum consequatur autem quae provident quos
-                  alias fugit maxime nisi labore, temporibus tempore illo natus
-                  voluptates aliquam ipsum officia quasi placeat aut facilis
-                  laudantium nam!
-                </p>
-                <p>
-                  Quam, iusto.Neque ratione ut deserunt unde dicta nesciunt,
-                  repudiandae aspernatur explicabo numquam! Tenetur!
-                </p>
-              </div>
-              <div className="location">Cracow, Poland</div>
-              <div className="price">60€ / day</div>
-              <label for="card3" className="button return" aria-hidden="true">
-                <i className="fas fa-arrow-left"></i>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
