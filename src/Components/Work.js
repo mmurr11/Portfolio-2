@@ -3,7 +3,10 @@ import "./Work.scss";
 const Work = (props) => {
   return (
     <>
-      <span className="myWork">&lt;My Work /&gt;</span>
+      <span className="myWork">
+        <span className="angle">&lt;</span>My Work
+        <span className="angle">/&gt;</span>
+      </span>
       <div className="wrapper">
         <div className="card">
           <input
@@ -63,7 +66,7 @@ const Work = (props) => {
             <div className="front" id="card2Front">
               <div className="inner">
                 <h2>Fullstack Reddit Clone</h2>
-                <label for="card2" className="button" aria-hidden="true">
+                <label for="card2" className="button return" aria-hidden="true">
                   <span className="btnText">Details</span>
                 </label>
               </div>
@@ -101,6 +104,9 @@ const Work = (props) => {
                       <span className="btnText">Code</span>
                     </label>
                   </a>
+                  <label for="card2" class="button return" aria-hidden="true">
+                    <span className="btnText">Return</span>
+                  </label>
                   <a
                     href="https://fake-reddit-1.vercel.app/"
                     target="_blank"
@@ -110,9 +116,6 @@ const Work = (props) => {
                       <span className="btnText">Demo</span>
                     </label>
                   </a>
-                  <label for="card2" class="button return" aria-hidden="true">
-                    <span className="btnText">Return</span>
-                  </label>
                 </div>
               </div>
             </div>

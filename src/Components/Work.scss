@@ -1,11 +1,18 @@
 $accent-color: #ffb510;
 
 .myWork {
-  color: #e91e53;
   margin: 2.5% auto;
   margin-top: 7.5%;
-  font-size: 2.5rem;
-  font-family: "arial";
+  font-weight: 800;
+  font-size: clamp(1.62rem, 0.88rem + 1.22vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 3;
+  color: #e91e63 !important;
+
+  .angle {
+    color: #ffb510;
+  }
 }
 
 .wrapper {
@@ -85,7 +92,7 @@ $accent-color: #ffb510;
   .inner {
     height: 100%;
     display: grid;
-    padding: 1.5em;
+    padding: 1em;
     transform: translateZ(80px) scale(0.94);
   }
 }
@@ -142,13 +149,17 @@ $accent-color: #ffb510;
 
   .about {
     display: flex;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
     flex-direction: column;
     justify-content: left;
     align-items: left;
     text-align: left;
     padding-left: 2.5%;
-    font-size: 2rem;
-    line-height: 2.5rem;
+    font-size: clamp(1rem, 0.88rem + 1.22vw, 2rem);
+    line-height: clamp(1rem, 0.88rem + 1.22vw, 3rem);
     letter-spacing: 1px;
     font-family: "arial";
     color: #202020;
@@ -170,7 +181,6 @@ $accent-color: #ffb510;
   }
 
   .buttonWrapper {
-    margin-top: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
