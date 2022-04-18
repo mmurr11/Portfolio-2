@@ -19,7 +19,7 @@ const Work = (props) => {
             <div className="front" id="card1Front">
               <div className="inner">
                 <h2>Simple todo SPA</h2>
-                <label for="card1" className="button" aria-hidden="true">
+                <label for="card1" className="button return" aria-hidden="true">
                   <span className="btnText">Details</span>
                 </label>
               </div>
@@ -146,7 +146,7 @@ const Work = (props) => {
             <div className="front" id="card3Front">
               <div className="inner">
                 <h2>LinkedIn Front-Facing Clone</h2>
-                <label for="card3" className="button" aria-hidden="true">
+                <label for="card3" className="button return" aria-hidden="true">
                   <span className="btnText">Details</span>
                 </label>
               </div>
@@ -206,7 +206,7 @@ const Work = (props) => {
             <div className="front" id="card4Front">
               <div className="inner">
                 <h2>Hubbel.crypto</h2>
-                <label for="card4" className="button" aria-hidden="true">
+                <label for="card4" className="button return" aria-hidden="true">
                   <span className="btnText">Details</span>
                 </label>
               </div>

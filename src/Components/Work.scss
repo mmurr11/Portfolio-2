@@ -127,8 +127,10 @@ $accent-color: #ffb510;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #202020;
-    font-weight: 700;
-    font-size: 2rem;
+    font-weight: bolder;
+    font-size: 3rem;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #ffb510;
   }
 }
 
