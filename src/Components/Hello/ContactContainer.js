@@ -92,7 +92,7 @@ const ContactContainer = () => {
 };
 
 const Info = styled.div`
-  max-width: 58%;
+  width: 58%;
   max-height: 30rem;
   color: white;
   display: flex;
@@ -100,7 +100,7 @@ const Info = styled.div`
   justify-content: space-between;
   align-items: top;
   margin-bottom: 2.5%;
-  @media (max-width: 1300px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: left;
   }
@@ -153,6 +153,7 @@ const Social = styled.div`
   color: #e91e63;
   font-weight: 600;
   text-decoration: none;
+  margin-bottom: 2.5%;
 `;
 
 const Icons = styled.ul`
