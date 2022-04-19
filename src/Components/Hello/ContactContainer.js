@@ -92,7 +92,7 @@ const ContactContainer = () => {
 };
 
 const Info = styled.div`
-  min-width: 60%;
+  max-width: 58%;
   max-height: 30rem;
   color: white;
   display: flex;
@@ -124,17 +124,25 @@ const Email = styled.div`
     padding: 5%;
     border: none;
     button {
-      max-width: 10%;
-      max-height: 10%;
+      max-width: 12%;
+      max-height: 12%;
       border: none;
       color: white;
       background-color: #202020;
+      @media (max-width: 1300px) {
+        max-width: 15%;
+        max-height: 15%;
+        padding-top: 10%;
+      }
 
       img {
-        max-width: 90%;
-        max-height: 90%;
+        width: 90%;
+        height: 90%;
         padding-left: 20%;
         cursor: pointer;
+        @media (max-width: 1300px) {
+          padding-left: 0%;
+        }
       }
     }
   }

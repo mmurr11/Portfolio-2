@@ -1,5 +1,6 @@
 $accent-color: #ffb510;
 .container {
+  min-width: 60vw;
   .open-btn {
     cursor: pointer;
     display: block;
@@ -7,7 +8,7 @@ $accent-color: #ffb510;
     height: 2.5em;
     line-height: 3.2em;
     margin: 0 auto 2.5% auto;
-    min-width: 55%;
+    min-width: 100%;
     background-color: #fff;
     border: 3px solid #ffb510;
     font-size: 2rem;
