@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import "./Drawer.scss";
-import Drawer from "react-bottom-drawer";
-import ContactForm from "./ContactForm";
 import styled from "styled-components";
+import SwipeableTemporaryDrawer from "./ContactForm";
 const gitImg = require("../../images/githubLogo.png");
 const linkedinImg = require("../../images/linkedinLogo.png");
 const clipboardImg = require("../../images/clipboardPink.png");
 
 const ContactContainer = () => {
-  const [isVisible, setIsVisible] = React.useState(false);
-  const openDrawer = React.useCallback(() => setIsVisible(true), []);
-  const closeDrawer = React.useCallback(() => setIsVisible(false), []);
   const [isCopied, setIsCopied] = useState(false);
 
   async function copyTextToClipboard(text) {
@@ -84,17 +80,7 @@ const ContactContainer = () => {
           </Icons>
         </Social>
       </Info>
-      <button className="open-btn return" onClick={openDrawer}>
-        <p>SAY HELLO</p>
-      </button>
-      <Drawer
-        duration={250}
-        hideScrollbars={true}
-        onClose={closeDrawer}
-        isVisible={isVisible}
-      >
-        <ContactForm />
-      </Drawer>
+      <SwipeableTemporaryDrawer />
       <div id="toast">
         <div class="checkicon">
           <i class="fas fa-check-square"></i>

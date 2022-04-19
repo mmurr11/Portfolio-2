@@ -6,70 +6,28 @@ $accent-color: #ffb510;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2.5%;
+  margin: 2.5% auto 1% auto;
 
-  .open-btn {
-    cursor: pointer;
-    display: block;
-    padding: 0 1.5em;
-    height: 2.5em;
-    line-height: 3.2em;
-    margin: 0 auto 2.5% auto;
-    min-width: 55%;
-    background-color: #fff;
-    border: 3px solid #ffb510;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    backface-visibility: hidden;
-    transition: 0.3s ease-in-out;
-    box-shadow: none;
-    color: #e91e63 !important;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-      background-color: #fff;
-      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-      text-shadow: none;
-      color: $accent-color;
-    }
-
-    &.return {
-      line-height: 3em;
-      color: $accent-color;
-      border-color: $accent-color;
-      text-shadow: none;
-      &:hover {
-        background-color: $accent-color;
-        color: #fff;
-        box-shadow: none;
-      }
-    }
-
-    P {
-      min-height: 100%;
-    }
+  P {
+    min-height: 100%;
   }
+}
 
-  .how-to-close {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.how-to-close {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
-  .esc-key {
-    border: 1px solid #ccc;
-    background: #ccc;
-    color: white;
-    border-radius: 2px;
-    padding: 5px;
-    display: block;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-  }
+.esc-key {
+  border: 1px solid #ccc;
+  background: #ccc;
+  color: white;
+  border-radius: 2px;
+  padding: 5px;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #toast {

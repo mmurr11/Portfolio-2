@@ -19,7 +19,11 @@ const Work = (props) => {
             <div className="front" id="card1Front">
               <div className="inner">
                 <h2>Simple todo SPA</h2>
-                <label for="card1" className="button return" aria-hidden="true">
+                <label
+                  htmlFor="card1"
+                  className="button return"
+                  aria-hidden="true"
+                >
                   <span className="btnText">Details</span>
                 </label>
               </div>
@@ -50,7 +54,11 @@ const Work = (props) => {
                       <span className="btnText">Code</span>
                     </label>
                   </a>
-                  <label for="card1" class="button return" aria-hidden="true">
+                  <label
+                    htmlFor="card1"
+                    class="button return"
+                    aria-hidden="true"
+                  >
                     <span className="btnText">Flip</span>
                   </label>
                   <a
@@ -79,7 +87,7 @@ const Work = (props) => {
             <div className="front" id="card2Front">
               <div className="inner">
                 <h2>Fullstack Reddit Clone</h2>
-                <label for="card2" class="button return" aria-hidden="true">
+                <label htmlFor="card2" class="button return" aria-hidden="true">
                   <span className="btnText">Details</span>
                 </label>
               </div>
@@ -117,7 +125,11 @@ const Work = (props) => {
                       <span className="btnText">Code</span>
                     </label>
                   </a>
-                  <label for="card2" class="button return" aria-hidden="true">
+                  <label
+                    htmlFor="card2"
+                    class="button return"
+                    aria-hidden="true"
+                  >
                     <span className="btnText">Flip</span>
                   </label>
                   <a
@@ -146,7 +158,11 @@ const Work = (props) => {
             <div className="front" id="card3Front">
               <div className="inner">
                 <h2>LinkedIn Front-Facing Clone</h2>
-                <label for="card3" className="button return" aria-hidden="true">
+                <label
+                  htmlFor="card3"
+                  className="button return"
+                  aria-hidden="true"
+                >
                   <span className="btnText">Details</span>
                 </label>
               </div>
@@ -177,7 +193,11 @@ const Work = (props) => {
                       <span className="btnText">Code</span>
                     </label>
                   </a>
-                  <label for="card3" class="button return" aria-hidden="true">
+                  <label
+                    htmlFor="card3"
+                    class="button return"
+                    aria-hidden="true"
+                  >
                     <span className="btnText">Flip</span>
                   </label>
                   <a
@@ -206,7 +226,11 @@ const Work = (props) => {
             <div className="front" id="card4Front">
               <div className="inner">
                 <h2>Hubbel.crypto</h2>
-                <label for="card4" className="button return" aria-hidden="true">
+                <label
+                  htmlFor="card4"
+                  className="button return"
+                  aria-hidden="true"
+                >
                   <span className="btnText">Details</span>
                 </label>
               </div>
@@ -241,7 +265,11 @@ const Work = (props) => {
                       <span className="btnText">Code</span>
                     </label>
                   </a>
-                  <label for="card4" class="button return" aria-hidden="true">
+                  <label
+                    htmlFor="card4"
+                    class="button return"
+                    aria-hidden="true"
+                  >
                     <span className="btnText">Flip</span>
                   </label>
                   <a
