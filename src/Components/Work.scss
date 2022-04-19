@@ -136,7 +136,7 @@ $accent-color: #ffb510;
 
 .back {
   transform: rotateY(180deg);
-  background-color: #fff;
+  background-color: #202020;
 
   .inner {
     grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
@@ -163,7 +163,6 @@ $accent-color: #ffb510;
     line-height: clamp(1rem, 0.88rem + 1.22vw, 2.8rem);
     letter-spacing: 1px;
     font-family: "arial";
-    color: #202020;
     margin-top: 1em;
 
     h3 {
@@ -173,10 +172,12 @@ $accent-color: #ffb510;
     ul {
       padding-left: 2.5%;
       list-style: none;
+      color: #fff;
     }
 
     p {
       padding-left: 2.5%;
+      color: #fff !important;
     }
   }
 

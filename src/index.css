@@ -5,10 +5,10 @@ html {
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+  background-color: #202020;
 }
 
 * {
-  background-color: #202020;
   box-sizing: border-box;
 }
 

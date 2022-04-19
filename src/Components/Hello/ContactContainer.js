@@ -30,7 +30,7 @@ const ContactContainer = () => {
   };
 
   const handleCopyClick = () => {
-    copyTextToClipboard("mmurray002@gmail.com")
+    copyTextToClipboard("murraymatthew002@gmail.com")
       .then(() => {
         setIsCopied(true);
         setTimeout(() => {
@@ -48,7 +48,7 @@ const ContactContainer = () => {
         <Email className="email">
           <span>E-mail</span>
           <p type="text">
-            mmurray002@gmail.com
+            murraymatthew002@gmail.com
             <button onClick={handleCopyClick}>
               <img src={clipboardImg} alt="clipboard" />
             </button>
@@ -142,6 +142,7 @@ const Email = styled.div`
       max-height: 10%;
       border: none;
       color: white;
+      background-color: #202020;
 
       img {
         max-width: 90%;
