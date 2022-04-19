@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Drawer.scss";
+import "./ContactContainer.scss";
 import styled from "styled-components";
 import SwipeableTemporaryDrawer from "./ContactForm";
 const gitImg = require("../../images/githubLogo.png");

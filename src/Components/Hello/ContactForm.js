@@ -9,6 +9,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import { useForm } from "@formspree/react";
 import "./ContactForm.scss";
 
 const SwipeableTemporaryDrawer = () => {
@@ -18,6 +19,10 @@ const SwipeableTemporaryDrawer = () => {
     bottom: false,
     right: false,
   });
+  const [, handleSubmit] = useForm("myylqzwq");
+  if (state.succeeded) {
+    return <div>Thank you for signing up!</div>;
+  }
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -39,25 +44,23 @@ const SwipeableTemporaryDrawer = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <form
+          className="wrapper"
+          onSubmit={handleSubmit}
+          style={{ maxHeight: "45vh" }}
+        >
+          <label className="emailLabel" htmlFor="email">
+            Email
+          </label>
+          <input className="emailInput" type="email" name="email" />
+          <button
+            className="sendButton"
+            type="submit"
+            disabled={state.submitting}
+          >
+            Sign up
+          </button>
+        </form>
       </List>
     </Box>
   );

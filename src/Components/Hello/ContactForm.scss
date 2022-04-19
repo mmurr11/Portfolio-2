@@ -1,6 +1,7 @@
 $accent-color: #ffb510;
 .container {
-  min-width: 60vw;
+  width: 60vw;
+  max-height: 30vh;
   .open-btn {
     cursor: pointer;
     display: block;
@@ -45,7 +46,6 @@ $accent-color: #ffb510;
 
   #form-app {
     min-width: 100%;
-    min-height: 10000px;
     padding: 1rem 2rem 5rem;
     background-color: #fbfbfb;
     border-radius: 8px;
@@ -63,6 +63,7 @@ $accent-color: #ffb510;
   .form-container {
     margin: 0 2rem;
     text-align: left;
+    min-height: 100%;
   }
 
   .user-info {
