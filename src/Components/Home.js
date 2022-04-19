@@ -1,15 +1,16 @@
 import styled from "styled-components";
 // import Clients from './Clients'
-import Contact from "./Contact";
 import Welcome from "./Welcome";
 import Work from "./Work";
+import React from "react";
+import ContactContainer from "./Hello/ContactContainer";
 
 const Home = () => {
   return (
     <Layout>
       <Welcome />
       <Work />
-      <Contact />
+      <ContactContainer />
     </Layout>
   );
 };
