@@ -1,4 +1,3 @@
-import * as React from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
@@ -7,7 +6,8 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useForm, ValidationError } from "@formspree/react";
+import React from "react";
+import { useForm, FormspreeProvider, ValidationError } from "@formspree/react";
 import "./ContactForm.scss";
 
 const outerTheme = createTheme({
@@ -18,9 +18,9 @@ const outerTheme = createTheme({
   },
 });
 
-function FormDialog() {
+const FormDialog = () => {
   const [open, setOpen] = React.useState(false);
-  const [state, handleSubmit] = useForm("myylqzwq");
+  const [state, handleSubmit] = useForm("contactForm");
   if (state.succeeded) {
     return <p>Thanks for joining!</p>;
   }
@@ -40,54 +40,49 @@ function FormDialog() {
         onClick={handleClickOpen}
         className="open-btn return"
       >
-        Open form dialog
+        SAY HELLO
       </Button>
       <ThemeProvider theme={outerTheme}>
-        <form onSubmit={handleSubmit}>
-          <Dialog open={open} onClose={handleClose}>
-            <DialogTitle style={{ fontSize: "xx-large", color: "#e91e53" }}>
-              Say Hello
-            </DialogTitle>
+        <Dialog open={open} onClose={handleClose}>
+          <DialogTitle style={{ fontSize: "xx-large", color: "#e91e53" }}>
+            Say Hello
+          </DialogTitle>
+          <form onSubmit={handleSubmit} className="contact">
             <DialogContent>
-              <DialogContentText style={{ fontSize: "large" }}>
-                Thanks! I'll get in touch with you ASAP.
-              </DialogContentText>
               <TextField
                 autoFocus
+                variant="standard"
                 margin="dense"
                 id="email"
                 label="Email Address"
                 type="email"
-                fullWidth
-                variant="standard"
                 name="email"
-                htmlFor="email"
                 required
                 style={{ fontSize: "large" }}
+                htmlFor="email"
               />
               <ValidationError
                 prefix="Email"
                 field="email"
-                style={{ fontSize: "large" }}
                 errors={state.errors}
               />
+
               <TextField
                 autoFocus
+                variant="standard"
                 margin="dense"
                 id="message"
                 label="Message"
                 type="message"
                 fullWidth
-                variant="standard"
                 name="message"
                 style={{ fontSize: "large" }}
-                htmlFor="message"
                 required
+                htmlFor="message"
               />
               <ValidationError
                 prefix="Message"
                 field="message"
-                style={{ fontSize: "large" }}
                 errors={state.errors}
               />
             </DialogContent>
@@ -97,17 +92,25 @@ function FormDialog() {
               </Button>
               <Button
                 type="submit"
-                style={{ fontSize: "large" }}
                 disabled={state.submitting}
+                style={{ fontSize: "large" }}
               >
-                Subscribe
+                Send
               </Button>
             </DialogActions>
-          </Dialog>
-        </form>
+          </form>
+        </Dialog>
       </ThemeProvider>
     </div>
   );
-}
+};
 
-export default FormDialog;
+const ContactForm = () => {
+  return (
+    <FormspreeProvider project="1925441084775726835">
+      <FormDialog />
+    </FormspreeProvider>
+  );
+};
+
+export default ContactForm;
