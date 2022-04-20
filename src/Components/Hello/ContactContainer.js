@@ -81,12 +81,7 @@ const ContactContainer = () => {
         </Social>
       </Info>
       <FormDialog />
-      <div id="toast">
-        <div class="checkicon">
-          <i class="fas fa-check-square"></i>
-        </div>
-        COPIED TO CLIPBOARD
-      </div>
+      <div id="toast">COPIED TO CLIPBOARD</div>
     </div>
   );
 };

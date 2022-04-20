@@ -3,7 +3,6 @@ import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import React from "react";
@@ -21,9 +20,17 @@ const outerTheme = createTheme({
 const FormDialog = () => {
   const [open, setOpen] = React.useState(false);
   const [state, handleSubmit] = useForm("contactForm");
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
+
+  const thank = () => {
+    if (state.succeeded) {
+      const x = document.getElementById("thank");
+      x.className = "show";
+      handleClose();
+      setTimeout(function () {
+        x.className = x.className.replace("show", "");
+      }, 3000);
+    }
+  };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -87,13 +94,14 @@ const FormDialog = () => {
               />
             </DialogContent>
             <DialogActions>
-              <Button style={{ fontSize: "large" }} onClick={handleClose}>
+              <Button className="open-btn" onClick={handleClose}>
                 Cancel
               </Button>
               <Button
                 type="submit"
                 disabled={state.submitting}
-                style={{ fontSize: "large" }}
+                className="open-btn"
+                onClick={thank}
               >
                 Send
               </Button>
@@ -109,6 +117,7 @@ const ContactForm = () => {
   return (
     <FormspreeProvider project="1925441084775726835">
       <FormDialog />
+      <div id="thank">Thanks! I'll get back to you as soon as I can.</div>
     </FormspreeProvider>
   );
 };

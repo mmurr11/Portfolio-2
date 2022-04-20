@@ -48,10 +48,55 @@ $accent-color: #ffb510;
 .MuiPaper-root {
   min-width: 45vw;
   min-height: 30vh;
+  outline: 2px solid #ffb510;
 
   .contact {
     display: flex;
     flex-direction: column;
+
+    .MuiDialogActions-root {
+      .open-btn {
+        cursor: pointer;
+        display: block;
+        padding: 0 1.5em;
+        height: 2em;
+        line-height: 3.2em;
+        margin: 0 auto 2.5% auto;
+        min-width: 20%;
+        background-color: #fff;
+        border: 3px solid #ffb510;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        backface-visibility: hidden;
+        transition: 0.3s ease-in-out;
+        box-shadow: none;
+        color: #e91e63 !important;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+          background-color: #fff;
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+          text-shadow: none;
+          color: $accent-color;
+        }
+
+        &.return {
+          line-height: 3em;
+          color: $accent-color;
+          border-color: $accent-color;
+          text-shadow: none;
+          &:hover {
+            background-color: $accent-color;
+            color: #fff;
+            box-shadow: none;
+          }
+        }
+      }
+    }
   }
 
   .MuiFormControl-root {
@@ -62,5 +107,34 @@ $accent-color: #ffb510;
       font-size: medium !important;
       line-height: 1.8rem;
     }
+
+    .MuiInput-input {
+      font-size: medium !important;
+    }
   }
+}
+
+#thank {
+  visibility: hidden;
+  min-width: 250px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #e91e63;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #ffb510;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  align-self: center;
+}
+
+#thank.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s;
+  animation: fadein 0.5s;
 }
