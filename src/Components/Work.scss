@@ -8,7 +8,7 @@ $accent-color: #ffb510;
   text-transform: uppercase;
   letter-spacing: 2px;
   z-index: 3;
-  color: #e91e63 !important;
+  color: #e91e53 !important;
 
   .angle {
     color: #ffb510;
@@ -225,7 +225,7 @@ $accent-color: #ffb510;
 
   &:hover {
     background-color: #fff;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px #f1f1f1;
     text-shadow: none;
     color: $accent-color;
   }
@@ -247,10 +247,11 @@ $accent-color: #ffb510;
   width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: lighten($accent-color, 20%);
+  background: $accent-color;
+  border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: $accent-color;
