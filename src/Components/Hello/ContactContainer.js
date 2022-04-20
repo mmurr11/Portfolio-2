@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ContactContainer.scss";
 import styled from "styled-components";
-import SwipeableTemporaryDrawer from "./ContactForm";
+import FormDialog from "./ContactForm";
 const gitImg = require("../../images/githubLogo.png");
 const linkedinImg = require("../../images/linkedinLogo.png");
 const clipboardImg = require("../../images/clipboardPink.png");
@@ -80,7 +80,7 @@ const ContactContainer = () => {
           </Icons>
         </Social>
       </Info>
-      <SwipeableTemporaryDrawer />
+      <FormDialog />
       <div id="toast">
         <div class="checkicon">
           <i class="fas fa-check-square"></i>

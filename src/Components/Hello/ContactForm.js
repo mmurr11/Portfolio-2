@@ -1,128 +1,113 @@
-import React, { useRef, useEffect } from "react";
-import Box from "@mui/material/Box";
-import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import * as React from "react";
 import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import PropTypes from "prop-types";
+import TextField from "@mui/material/TextField";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useForm, ValidationError } from "@formspree/react";
 import "./ContactForm.scss";
 
-const SwipeableTemporaryDrawer = () => {
-  const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
-  });
-  const [, handleSubmit] = useForm("myylqzwq");
+const outerTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#ffb510",
+    },
+  },
+});
+
+function FormDialog() {
+  const [open, setOpen] = React.useState(false);
+  const [state, handleSubmit] = useForm("myylqzwq");
   if (state.succeeded) {
-    return <div>Thank you for signing up!</div>;
+    return <p>Thanks for joining!</p>;
   }
 
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-
-    setState({ ...state, [anchor]: open });
+  const handleClickOpen = () => {
+    setOpen(true);
   };
 
-  const useClickAway = (ref) => {
-    useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          setState({ bottom: false });
-        }
-      }
-      // Bind the event listener
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, [ref]);
+  const handleClose = () => {
+    setOpen(false);
   };
-
-  const OutsideAlerter = (props) => {
-    const wrapperRef = useRef(null);
-    useClickAway(wrapperRef);
-    if (state.bottom === true) {
-      return <div ref={wrapperRef}>{props.children}</div>;
-    } else return null;
-  };
-
-  OutsideAlerter.propTypes = {
-    children: PropTypes.element.isRequired,
-  };
-
-  const list = (anchor) => (
-    <Box
-      sx={{
-        width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
-      }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List
-        sx={{
-          borderRadius: "12px",
-        }}
-      >
-        <form onSubmit={handleSubmit} className="wrapper">
-          <label htmlFor="email">Email Address</label>
-          <input id="email" type="email" name="email" />
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
-          <textarea id="message" name="message" />
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
-          />
-          <button type="submit" disabled={state.submitting}>
-            Submit
-          </button>
-        </form>
-      </List>
-    </Box>
-  );
 
   return (
     <div className="container">
-      {["bottom"].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button
-            className="open-btn return"
-            onClick={toggleDrawer(anchor, true)}
-          >
-            SAY HELLO
-          </Button>
-          <SwipeableDrawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onClick={toggleDrawer(anchor, true)}
-            onOpen={toggleDrawer(anchor, true)}
-            onEscapeKeyDown={toggleDrawer(anchor, false)}
-            transitionDuration={{
-              appear: 400,
-              enter: 500,
-              exit: 0,
-            }}
-          >
-            <OutsideAlerter>{list(anchor)}</OutsideAlerter>
-          </SwipeableDrawer>
-        </React.Fragment>
-      ))}
+      <Button
+        variant="outlined"
+        onClick={handleClickOpen}
+        className="open-btn return"
+      >
+        Open form dialog
+      </Button>
+      <ThemeProvider theme={outerTheme}>
+        <form onSubmit={handleSubmit}>
+          <Dialog open={open} onClose={handleClose}>
+            <DialogTitle style={{ fontSize: "xx-large", color: "#e91e53" }}>
+              Say Hello
+            </DialogTitle>
+            <DialogContent>
+              <DialogContentText style={{ fontSize: "large" }}>
+                Thanks! I'll get in touch with you ASAP.
+              </DialogContentText>
+              <TextField
+                autoFocus
+                margin="dense"
+                id="email"
+                label="Email Address"
+                type="email"
+                fullWidth
+                variant="standard"
+                name="email"
+                htmlFor="email"
+                required
+                style={{ fontSize: "large" }}
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                style={{ fontSize: "large" }}
+                errors={state.errors}
+              />
+              <TextField
+                autoFocus
+                margin="dense"
+                id="message"
+                label="Message"
+                type="message"
+                fullWidth
+                variant="standard"
+                name="message"
+                style={{ fontSize: "large" }}
+                htmlFor="message"
+                required
+              />
+              <ValidationError
+                prefix="Message"
+                field="message"
+                style={{ fontSize: "large" }}
+                errors={state.errors}
+              />
+            </DialogContent>
+            <DialogActions>
+              <Button style={{ fontSize: "large" }} onClick={handleClose}>
+                Cancel
+              </Button>
+              <Button
+                type="submit"
+                style={{ fontSize: "large" }}
+                disabled={state.submitting}
+              >
+                Subscribe
+              </Button>
+            </DialogActions>
+          </Dialog>
+        </form>
+      </ThemeProvider>
     </div>
   );
-};
+}
 
-export default SwipeableTemporaryDrawer;
+export default FormDialog;
