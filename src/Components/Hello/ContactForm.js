@@ -38,7 +38,7 @@ const SwipeableTemporaryDrawer = () => {
        */
       function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
-          alert("You clicked outside of me!");
+          setState({ bottom: false });
         }
       }
       // Bind the event listener
@@ -111,8 +111,10 @@ const SwipeableTemporaryDrawer = () => {
             onClick={toggleDrawer(anchor, true)}
             onOpen={toggleDrawer(anchor, true)}
             onEscapeKeyDown={toggleDrawer(anchor, false)}
-            ModalProps={{
-              keepMounted: true,
+            transitionDuration={{
+              appear: 400,
+              enter: 500,
+              exit: 0,
             }}
           >
             <OutsideAlerter>{list(anchor)}</OutsideAlerter>
