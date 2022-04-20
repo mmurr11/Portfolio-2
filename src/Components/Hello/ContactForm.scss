@@ -57,9 +57,10 @@ $accent-color: #ffb510;
   .MuiFormControl-root {
     margin-bottom: 1em;
     width: 100%;
-  }
-}
 
-.MuiInputLabel-root {
-  font-size: small !important;
+    .MuiInputLabel-root {
+      font-size: medium !important;
+      line-height: 1.8rem;
+    }
+  }
 }
