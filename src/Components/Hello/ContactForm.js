@@ -1,15 +1,10 @@
-import * as React from "react";
+import React, { useRef, useEffect } from "react";
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import { useForm } from "@formspree/react";
+import PropTypes from "prop-types";
+import { useForm, ValidationError } from "@formspree/react";
 import "./ContactForm.scss";
 
 const SwipeableTemporaryDrawer = () => {
@@ -36,29 +31,63 @@ const SwipeableTemporaryDrawer = () => {
     setState({ ...state, [anchor]: open });
   };
 
+  const useClickAway = (ref) => {
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          alert("You clicked outside of me!");
+        }
+      }
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  };
+
+  const OutsideAlerter = (props) => {
+    const wrapperRef = useRef(null);
+    useClickAway(wrapperRef);
+    if (state.bottom === true) {
+      return <div ref={wrapperRef}>{props.children}</div>;
+    } else return null;
+  };
+
+  OutsideAlerter.propTypes = {
+    children: PropTypes.element.isRequired,
+  };
+
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      sx={{
+        width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
+      }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        <form
-          className="wrapper"
-          onSubmit={handleSubmit}
-          style={{ maxHeight: "45vh" }}
-        >
-          <label className="emailLabel" htmlFor="email">
-            Email
-          </label>
-          <input className="emailInput" type="email" name="email" />
-          <button
-            className="sendButton"
-            type="submit"
-            disabled={state.submitting}
-          >
-            Sign up
+      <List
+        sx={{
+          borderRadius: "12px",
+        }}
+      >
+        <form onSubmit={handleSubmit} className="wrapper">
+          <label htmlFor="email">Email Address</label>
+          <input id="email" type="email" name="email" />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
+          <textarea id="message" name="message" />
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+          <button type="submit" disabled={state.submitting}>
+            Submit
           </button>
         </form>
       </List>
@@ -79,9 +108,14 @@ const SwipeableTemporaryDrawer = () => {
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
+            onClick={toggleDrawer(anchor, true)}
             onOpen={toggleDrawer(anchor, true)}
+            onEscapeKeyDown={toggleDrawer(anchor, false)}
+            ModalProps={{
+              keepMounted: true,
+            }}
           >
-            {list(anchor)}
+            <OutsideAlerter>{list(anchor)}</OutsideAlerter>
           </SwipeableDrawer>
         </React.Fragment>
       ))}
