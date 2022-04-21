@@ -1,13 +1,20 @@
 {
   "files": {
-    "main.css": "/Portfolio-2/static/css/main.3c79f0c6.css",
-    "main.js": "/Portfolio-2/static/js/main.a93daad0.js",
+    "main.css": "/Portfolio-2/static/css/main.f40c69bf.css",
+    "main.js": "/Portfolio-2/static/js/main.3eaa26c8.js",
+    "static/media/LinkedInClone.png": "/Portfolio-2/static/media/LinkedInClone.a415148f89772994b96b.png",
+    "static/media/Hubbel.png": "/Portfolio-2/static/media/Hubbel.a18ac3606680aa9d448d.png",
+    "static/media/alabamatheater.jpg": "/Portfolio-2/static/media/alabamatheater.eb7925f106616dfb05e7.jpg",
+    "static/media/Fake-Reddit.png": "/Portfolio-2/static/media/Fake-Reddit.4683fe24132ed0417ca2.png",
+    "static/media/githubLogo.png": "/Portfolio-2/static/media/githubLogo.908c00c07e80e4ccbd10.png",
+    "static/media/linkedinLogo.png": "/Portfolio-2/static/media/linkedinLogo.f07632d04874f71dddc0.png",
+    "static/media/todo.png": "/Portfolio-2/static/media/todo.a76996d0b756f50e96a4.png",
     "index.html": "/Portfolio-2/index.html",
-    "main.3c79f0c6.css.map": "/Portfolio-2/static/css/main.3c79f0c6.css.map",
-    "main.a93daad0.js.map": "/Portfolio-2/static/js/main.a93daad0.js.map"
+    "main.f40c69bf.css.map": "/Portfolio-2/static/css/main.f40c69bf.css.map",
+    "main.3eaa26c8.js.map": "/Portfolio-2/static/js/main.3eaa26c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c79f0c6.css",
-    "static/js/main.a93daad0.js"
+    "static/css/main.f40c69bf.css",
+    "static/js/main.3eaa26c8.js"
   ]
 }
