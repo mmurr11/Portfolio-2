@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio-2/static/css/main.20133dc7.css",
-    "main.js": "/Portfolio-2/static/js/main.fadec195.js",
+    "main.js": "/Portfolio-2/static/js/main.b368e246.js",
     "static/media/LinkedInClone.png": "/Portfolio-2/static/media/LinkedInClone.a415148f89772994b96b.png",
     "static/media/Hubbel.png": "/Portfolio-2/static/media/Hubbel.a18ac3606680aa9d448d.png",
     "static/media/alabamatheater.jpg": "/Portfolio-2/static/media/alabamatheater.eb7925f106616dfb05e7.jpg",
@@ -11,10 +11,10 @@
     "static/media/todo.png": "/Portfolio-2/static/media/todo.a76996d0b756f50e96a4.png",
     "index.html": "/Portfolio-2/index.html",
     "main.20133dc7.css.map": "/Portfolio-2/static/css/main.20133dc7.css.map",
-    "main.fadec195.js.map": "/Portfolio-2/static/js/main.fadec195.js.map"
+    "main.b368e246.js.map": "/Portfolio-2/static/js/main.b368e246.js.map"
   },
   "entrypoints": [
     "static/css/main.20133dc7.css",
-    "static/js/main.fadec195.js"
+    "static/js/main.b368e246.js"
   ]
 }
