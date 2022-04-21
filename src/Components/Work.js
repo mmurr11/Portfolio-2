@@ -241,7 +241,7 @@ const Work = (props) => {
                   <h3>What is this project?</h3>
                   <p>
                     This is a full stack decentralized cryptocurrency exchange.
-                    You can login with A Metamask Ethereum wallet and swap any
+                    You can login with a Metamask Ethereum wallet and swap any
                     ERC-20 tokens. This was my first project and my introduction
                     to web development.
                   </p>
