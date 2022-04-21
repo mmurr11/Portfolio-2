@@ -51,7 +51,13 @@ const FormDialog = () => {
       </Button>
       <ThemeProvider theme={outerTheme}>
         <Dialog open={open} onClose={handleClose}>
-          <DialogTitle style={{ fontSize: "xx-large", color: "#e91e53" }}>
+          <DialogTitle
+            style={{
+              fontSize: "xx-large",
+              color: "#e91e53",
+              textAlign: "center",
+            }}
+          >
             Say Hello
           </DialogTitle>
           <form onSubmit={handleSubmit} className="contact">
@@ -75,7 +81,6 @@ const FormDialog = () => {
               />
 
               <TextField
-                autoFocus
                 variant="standard"
                 margin="dense"
                 id="message"
